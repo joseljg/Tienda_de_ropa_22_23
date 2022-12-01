@@ -18,6 +18,7 @@ public class MainActivity<foreach> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
   /*      Connection c = ConfiguracionDB.conectarConBaseDeDatos();
         if(c == null)
         {
@@ -39,5 +40,18 @@ public class MainActivity<foreach> extends AppCompatActivity {
         System.out.println("no se pudieron obtener los datos");
     }
     */
+    /*
+       boolean ropaBorrada = RopaDB.borrarRopa("r1");
+       if(ropaBorrada == true)
+       {
+           Log.i("sql", "se ha borrado correctamente");
+           System.out.println("se ha borrado correctamente");
+       }
+       else{
+           Log.i("sql", "no se pudo borrar");
+           System.out.println("no se pudo borrar");
+       }
+
+     */
     }
 }

@@ -3,6 +3,7 @@ package es.joseljg.tiendaderopa.modelo;
 import android.util.Log;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -42,6 +43,33 @@ public class RopaDB {
         } catch (SQLException e) {
             Log.i("sql", "error sql");
             return null;
+        }
+    }
+
+    //-----------------------------------------------------------------------------------------------------
+    public static boolean borrarRopa(String cod_ropa) {
+        Connection conexion = ConfiguracionDB.conectarConBaseDeDatos();
+        if(conexion == null)
+        {
+            return false;
+        }
+        try {
+            String ordensql = "DELETE FROM ropa WHERE (codropa = ?);";
+            PreparedStatement sentencia = conexion.prepareStatement(ordensql);
+            sentencia.setString(1, cod_ropa);
+            int filasafectadas = sentencia.executeUpdate();
+            sentencia.close();
+            conexion.close();
+            if(filasafectadas > 0)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        } catch (SQLException e) {
+            return false;
         }
     }
 }
