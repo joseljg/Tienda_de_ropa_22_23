@@ -106,4 +106,9 @@ public class MainActivity<foreach> extends AppCompatActivity {
         Intent intent = new Intent(this,InsertarRopaActivity.class);
         startActivity(intent);
     }
+
+    public void mostrarRopa(View view) {
+        Intent intent = new Intent(this,MostrarRopaActivity.class);
+        startActivity(intent);
+    }
 }

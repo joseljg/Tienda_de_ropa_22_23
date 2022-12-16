@@ -15,6 +15,13 @@
         android:theme="@style/Theme.TiendaDeRopa"
         tools:targetApi="31">
         <activity
+            android:name=".MostrarRopaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".InsertarRopaActivity"
             android:exported="false">
             <meta-data

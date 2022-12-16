@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="#908BC34A"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/img_item_ropa"
+        android:layout_width="118dp"
+        android:layout_height="166dp"
+        android:layout_weight="1"
+        tools:srcCompat="@drawable/fruta" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_item_codropa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Codigo de ropa"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_item_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="tipo"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_item_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="precio"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

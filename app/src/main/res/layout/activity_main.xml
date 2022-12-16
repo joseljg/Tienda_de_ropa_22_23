@@ -8,13 +8,25 @@
 
     <Button
         android:id="@+id/bt_nueva_ropa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="Nueva Ropa"
+        android:layout_width="164dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="72dp"
         android:onClick="insertarRopa"
+        android:text="Nueva Ropa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_mostrar_ropa"
+        android:layout_width="173dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="44dp"
+        android:text="mostrar ropa"
+        android:onClick="mostrarRopa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_nueva_ropa" />
 </androidx.constraintlayout.widget.ConstraintLayout>
