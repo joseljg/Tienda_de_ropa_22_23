@@ -20,18 +20,19 @@ public class MostrarRopaActivity extends AppCompatActivity {
 
     private RecyclerView rv_mostrar_ropa;
     ListaRopasAdapter adaptadorRopas;
+    private ArrayList<Ropa> ropas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_ropa);
         rv_mostrar_ropa = (RecyclerView) findViewById(R.id.rv_mostrar_ropa);
-        ArrayList<Ropa> ropas = new ArrayList<Ropa>();
-        //ropas = RopaController.obtenerTodasLasRopas();
-        ropas.add(new Ropa("r1234","pantalon","L","azul",3));
-        ropas.add(new Ropa("r1235","pantalon","XL","rojo",4));
-        ropas.add(new Ropa("r1236","pantalon","XL","amarillo",5));
-        ropas.add(new Ropa("r1237","pantalon","L","verde",6));
+        ropas = new ArrayList<Ropa>();
+        ropas = RopaController.obtenerTodasLasRopas();
+        //ropas.add(new Ropa("r1234","pantalon","L","azul",3));
+        //ropas.add(new Ropa("r1235","pantalon","XL","rojo",4));
+        //ropas.add(new Ropa("r1236","pantalon","XL","amarillo",5));
+        //ropas.add(new Ropa("r1237","pantalon","L","verde",6));
 
         //-----------------------------------------------------------------
         adaptadorRopas = new ListaRopasAdapter(this,ropas);
